@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Riyaz Agha — Software Engineering Portfolio</title>
+  <meta name="description" content="Portfolio of a Grade 12 applicant interested in Software Engineering. Projects in web, data, AI, and mobile."/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --muted:#9aa6b2; --accent:#7dd3fc; --glass: rgba(255,255,255,0.03);
+      --maxw:1100px; font-family:Inter,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:linear-gradient(180deg,#071023 0%, #071827 100%);color:#e6eef6;line-height:1.5}
+    .container{max-width:var(--maxw);margin:0 auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .logo{width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,#38bdf8,#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700;color:#021;box-shadow:0 6px 18px rgba(0,0,0,0.5)}
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-weight:600}
+    .hero{display:grid;grid-template-columns:1fr;gap:18px;padding:36px 0}
+    h1{font-size:28px;margin:0;color:#fff}
+    p.lead{color:var(--muted);margin:8px 0 0}
+    .cta{margin-top:14px;display:flex;gap:12px;flex-wrap:wrap}
+    .btn{background:var(--accent);color:#042;text-decoration:none;padding:10px 16px;border-radius:8px;font-weight:700}
+    .btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+    .card-row{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:28px}
+    .card{background:var(--card);padding:18px;border-radius:12px;box-shadow:0 6px 20px rgba(3,7,18,0.6);min-height:140px}
+    .small{font-size:13px;color:var(--muted)}
+    .projects{margin-top:28px}
+    .project-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .project{background:var(--glass);padding:14px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+    .project h3{margin:0 0 6px;font-size:16px}
+    .project p{margin:0;color:var(--muted);font-size:14px}
+    .chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+    .chip{background:rgba(255,255,255,0.04);padding:6px 8px;border-radius:8px;font-size:12px;color:var(--muted)}
+    footer{margin-top:48px;padding:30px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+    .contact{display:grid;grid-template-columns:1fr 320px;gap:18px;margin-top:26px}
+    form label{display:block;font-size:13px;color:var(--muted);margin-bottom:6px}
+    input,textarea,select{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:#e6eef6}
+    textarea{min-height:120px}
+    .skill-list{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:rgba(125,211,252,0.08);color:var(--accent);padding:6px 8px;border-radius:999px;font-weight:600;font-size:13px}
+    /* responsive */
+    @media (max-width:900px){
+      .card-row{grid-template-columns:repeat(2,1fr)}
+      .project-grid{grid-template-columns:repeat(2,1fr)}
+      .contact{grid-template-columns:1fr}
+    }
+    @media (max-width:600px){
+      header{flex-direction:column;align-items:flex-start}
+      .card-row{grid-template-columns:1fr}
+      .project-grid{grid-template-columns:1fr}
+      .hero{padding:18px 0}
+      h1{font-size:22px}
+    }
+    .note{font-size:13px;color:var(--muted);margin-top:8px}
+    .meta{font-size:12px;color:var(--muted)}
+    .center{display:flex;align-items:center;gap:10px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">RG</div>
+        <div>
+          <div style="font-weight:700">Riyaz Agha</div>
+          <div class="meta">Aspiring MSc Software Engineering • Front-end & AI projects</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div>
+        <h1>Grade 12 student • Building software that solves real problems</h1>
+        <p class="lead">I’m applying to Software Engineering programs. I build web apps, simple ML prototypes, and mobile interfaces. I focus on clear code, testing, and practical impact.</p>
+        <div class="cta">
+          <a class="btn" href="#contact">Get in touch</a>
+          <a class="btn ghost" href="/resume.pdf" download>Download Resume</a>
+        </div>
+        <div class="note">Tip: Link your GitHub and short demo videos to help admissions see your work quickly.</div>
+      </div>
+
+      <div style="display:flex;flex-direction:column;gap:12px">
+        <div class="card-row">
+          <div class="card">
+            <div class="small">Education</div>
+            <div style="font-weight:700;margin-top:6px">Grade 12 — [Your School]</div>
+            <div class="meta">Expected graduation: June 2026</div>
+          </div>
+
+          <div class="card">
+            <div class="small">Experience</div>
+            <div style="font-weight:700;margin-top:6px">Intern — Local Web Studio</div>
+            <div class="meta">Front-end development, testing, and small feature delivery</div>
+          </div>
+
+          <div class="card">
+            <div class="small">Goal</div>
+            <div style="font-weight:700;margin-top:6px">MSc / Software Engineering</div>
+            <div class="meta">Focus: scalable systems, CI/CD, and applied ML</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="projects">
+      <h2 style="margin:0 0 12px">Selected Projects</h2>
+      <div class="project-grid">
+        <!-- Project 1 -->
+        <div class="project">
+          <h3>SmartStore Search (React + Vector Search)</h3>
+          <p>Embedding-based product search demo. Built a React frontend + simple vector index that improves product discovery.</p>
+          <div class="chips">
+            <div class="chip">React</div><div class="chip">Node.js</div><div class="chip">Vector Search</div>
+          </div>
+          <div style="margin-top:10px">
+            <a class="meta" href="https://github.com/yourname/smartstore" target="_blank">GitHub</a> •
+            <a class="meta" href="#" target="_blank">Live demo</a>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project">
+          <h3>QuizApp (Flask + SQLite)</h3>
+          <p>Small web app for teachers to create quizzes, track student scores, and export CSV reports.</p>
+          <div class="chips"><div class="chip">Python</div><div class="chip">Flask</div><div class="chip">SQLite</div></div>
+          <div style="margin-top:10px"><a class="meta" href="https://github.com/yourname/quizapp" target="_blank">GitHub</a></div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project">
+          <h3>Portfolio Website (This site)</h3>
+          <p>Responsive single-page portfolio showcasing projects, resume, and contact form. Built with HTML/CSS/Vanilla JS.</p>
+          <div class="chips"><div class="chip">HTML</div><div class="chip">CSS</div><div class="chip">JS</div></div>
+          <div style="margin-top:10px"><a class="meta" href="https://github.com/yourname/portfolio" target="_blank">GitHub</a></div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="project">
+          <h3>DataViz: School Attendance Dashboard</h3>
+          <p>Tableau + Python ETL pipeline to clean attendance data and display trends for teachers.</p>
+          <div class="chips"><div class="chip">Python</div><div class="chip">Tableau</div></div>
+        </div>
+
+        <!-- Add more projects as needed -->
+      </div>
+    </section>
+
+    <section id="skills" style="margin-top:28px">
+      <h2 style="margin-bottom:10px">Skills & Tools</h2>
+      <div class="skill-list">
+        <div class="skill">HTML/CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">React</div>
+        <div class="skill">Python</div>
+        <div class="skill">Flask</div>
+        <div class="skill">SQL</div>
+        <div class="skill">Git</div>
+        <div class="skill">Tableau</div>
+        <div class="skill">CI/CD basics</div>
+      </div>
+      <div class="note">Showcase 2–3 projects that use these skills—admissions love depth over breadth.</div>
+    </section>
+
+    <section id="contact" style="margin-top:28px">
+      <h2>Contact</h2>
+      <div class="contact">
+        <div>
+          <p class="small">Email me to discuss my application, projects, or to request my full CV and reference details.</p>
+          <div style="margin-top:12px">
+            <strong>Email:</strong> <a href="mailto:your.email@example.com" style="color:var(--accent)">your.email@example.com</a><br/>
+            <strong>GitHub:</strong> <a href="https://github.com/yourname" target="_blank" style="color:var(--accent)">github.com/yourname</a>
+          </div>
+          <div style="margin-top:16px">
+            <a class="btn" href="mailto:your.email@example.com?subject=Application%20Query">Email me</a>
+            <a class="btn ghost" href="/resume.pdf" download>Download Resume</a>
+          </div>
+        </div>
+
+        <form id="contactForm" onsubmit="return submitForm(event)">
+          <label for="name">Name</label>
+          <input id="name" name="name" required placeholder="Your name">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required placeholder="Short note (two lines is fine)"></textarea>
+          <div style="margin-top:10px">
+            <button type="submit" class="btn">Send</button>
+            <button type="button" onclick="clearForm()" class="btn ghost">Clear</button>
+          </div>
+          <div id="formNote" class="note" style="display:none;margin-top:8px">Sending…</div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap">
+        <div>© 2025 Riyaz Agha — Aspiring Software Engineer</div>
+        <div class="meta">Built with care • Link to <a href="https://github.com/yourname" style="color:var(--accent)">GitHub</a></div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    function submitForm(e){
+      e.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name||!email||!message) return alert('Please complete the form.');
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+      const mailto = `mailto:your.email@example.com?subject=${encodeURIComponent('Portfolio contact from ' + name)}&body=${body}`;
+      document.getElementById('formNote').style.display = 'block';
+      // fallback: open mail client
+      setTimeout(()=>{ window.location.href = mailto; document.getElementById('formNote').style.display='none'; },600);
+      return false;
+    }
+    function clearForm(){ document.getElementById('contactForm').reset(); }
+  </script>
+</body>
+</html>
