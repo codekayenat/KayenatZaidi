@@ -1,95 +1,73 @@
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Github, Mail, GraduationCap, Code2 } from "lucide-react";
-import { motion } from "framer-motion";
-
-export default function KayenatPortfolio() {
-  return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 via-white to-pink-50 text-gray-900">
-      {/* Header */}
-      <header className="text-center py-10">
-        <motion.h1
-          className="text-4xl md:text-5xl font-bold text-indigo-700"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-        >
-          Kayenat Zaidi
-        </motion.h1>
-        <p className="text-lg text-gray-600 mt-2">Aspiring Software Engineer | Class of 2026</p>
-        <div className="mt-4 flex justify-center gap-4">
-          <Button variant="outline" asChild>
-            <a href="mailto:kayenatzaidi@gmail.com"><Mail className="mr-2 h-4 w-4" /> Contact Me</a>
-          </Button>
-          <Button variant="default" asChild>
-            <a href="https://github.com/codekayenat" target="_blank" rel="noopener noreferrer">
-              <Github className="mr-2 h-4 w-4" /> GitHub
-            </a>
-          </Button>
-        </div>
-      </header>
-
-      {/* About Section */}
-      <section className="max-w-4xl mx-auto px-6 mb-16">
-        <Card className="shadow-lg border-0 bg-white/80 backdrop-blur rounded-2xl">
-          <CardHeader>
-            <CardTitle className="text-2xl font-semibold text-indigo-700">About Me</CardTitle>
-          </CardHeader>
-          <CardContent className="text-gray-700 leading-relaxed">
-            <p>
-              Hi! I'm <b>Kayenat Zaidi</b>, a Grade 12 student at Western Canada High School, graduating in June 2026.
-              I'm passionate about technology, coding, and problem-solving. I love exploring how software can make a real-world impact.
-              My goal is to pursue a <b>Bachelor’s in Software Engineering</b> and continue building projects that make technology accessible and meaningful.
-            </p>
-          </CardContent>
-        </Card>
-      </section>
-
-      {/* Experience Section */}
-      <section className="max-w-5xl mx-auto px-6 mb-16">
-        <h2 className="text-3xl font-semibold text-indigo-700 mb-6 text-center">Projects & Experience</h2>
-        <div className="grid md:grid-cols-2 gap-6">
-          <motion.div whileHover={{ scale: 1.03 }}>
-            <Card className="shadow-md bg-gradient-to-tr from-indigo-100 to-white border-0">
-              <CardHeader className="flex items-center gap-2">
-                <Code2 className="text-indigo-600" />
-                <CardTitle>GitHub Portfolio</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-700">
-                  I’ve built and shared my coding projects on GitHub where I explore front-end development, Python, and creative coding challenges.
-                </p>
-                <a
-                  href="https://github.com/codekayenat"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-indigo-600 hover:underline mt-2 inline-block"
-                >
-                  View My Work →
-                </a>
-              </CardContent>
-            </Card>
-          </motion.div>
-
-          <motion.div whileHover={{ scale: 1.03 }}>
-            <Card className="shadow-md bg-gradient-to-tr from-pink-100 to-white border-0">
-              <CardHeader className="flex items-center gap-2">
-                <GraduationCap className="text-pink-600" />
-                <CardTitle>Future Goals</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p className="text-gray-700">
-                  I'm eager to contribute to meaningful software projects that combine creativity and logic. My dream is to join a university that fosters innovation and global collaboration.
-                </p>
-              </CardContent>
-            </Card>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="text-center py-10 border-t text-gray-600">
-        <p>© {new Date().getFullYear()} Kayenat Zaidi — Designed with ❤️ and curiosity.</p>
-      </footer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kayenat Zaidi | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Kayenat Zaidi</h1>
+      <p>Grade 12 Student | Aspiring Software Engineer | Western Canada High School</p>
     </div>
-  );
-}
+  </header>
+
+  <section id="about">
+    <div class="container">
+      <h2>About Me</h2>
+      <p>
+        Hi! I’m <strong>Kayenat Zaidi</strong>, a Grade 12 student at Western Canada High School, graduating in June 2026.
+        I’m passionate about <strong>software development</strong>, creative problem-solving, and building meaningful projects.
+        My goal is to pursue <strong>Software Engineering</strong> in Fall 2026 and continue growing as a developer.
+      </p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="container">
+      <h2>My Projects</h2>
+      <p>Here are some of my projects on <a href="https://github.com/codekayenat" target="_blank">GitHub</a> 👇</p>
+      <div class="project-list">
+        <div class="project">
+          <h3>Weather App</h3>
+          <p>A simple weather forecast app using an API to show real-time data.</p>
+        </div>
+        <div class="project">
+          <h3>Portfolio Website</h3>
+          <p>My first responsive website built with HTML, CSS, and a love for clean design.</p>
+        </div>
+        <div class="project">
+          <h3>To-Do List</h3>
+          <p>An interactive web app for managing daily tasks efficiently.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="goals">
+    <div class="container">
+      <h2>My Goals</h2>
+      <p>
+        I’m currently improving my coding skills in <strong>Python, HTML, CSS, and JavaScript</strong>.
+        My next step is to work on real-world applications and contribute to open-source projects.
+      </p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <p>
+        📧 Email: <a href="mailto:kayenatzaidi@gmail.com">kayenatzaidi@gmail.com</a><br>
+        💻 GitHub: <a href="https://github.com/codekayenat" target="_blank">github.com/codekayenat</a>
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Kayenat Zaidi | Built with ❤️ and curiosity</p>
+  </footer>
+</body>
+</html>
